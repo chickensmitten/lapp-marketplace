@@ -6,7 +6,7 @@ const media = [
   {
     name: "Succulent (photo)",
     price: 200,
-    source: "01.jpg",
+    source: "succulent.jpg",
     invoice: "",
     paymentHash: "",
     buyButton: false,
@@ -16,7 +16,7 @@ const media = [
   {
     name: "Melbourne (photo)",
     price: 200,
-    source: "02.jpg",
+    source: "melbourne.jpg",
     invoice: "",
     paymentHash: "",
     buyButton: false,
@@ -24,9 +24,9 @@ const media = [
     fileDownloadUrl: ""
   },
   {
-    name: "Madayaka (video)",
+    name: "Madayaka (photo)",
     price: 1000,
-    source: "03.mp4",
+    source: "madayaka.jpg",
     invoice: "",
     paymentHash: "",
     buyButton: false,
@@ -104,7 +104,7 @@ function Media(props){
           <div style={{margin:'auto', width:'80%'}}>
             <p>{m.name}</p>
             <p>Price: {m.price} sats</p>
-            <img src={"assets/" + m.source + "small.jpg"} height="220px" alt={m.name} />
+            <img src={m.source} height="220px" alt={m.name} />
             <br />
             <button disabled={m.buyButton} style={{padding: '10px', margin: '10px'}} type="button" onClick={ () => { generateInvoice(m.source, m.price) } }>Buy</button>
             <button disabled={m.checkButton} style={{padding: '10px', margin: '10px'}} type="button" onClick={ () => { checkInvoice(m.paymentHash) } }>Check Payment</button>
