@@ -1,4 +1,4 @@
-# Lapp MArketplace
+# Lapp Marketplace
 
 ## Requirements
 - Requires docker and docker compose
